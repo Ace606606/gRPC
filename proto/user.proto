@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package userapi;
+
+service UserService {
+    rpc GetUserInfo (UserRequest) returns (UserReply);
+}
+
+message UserRequest {
+    string name = 1;
+}
+
+message UserReply {
+    string greeting = 1;
+}
